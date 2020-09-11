@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kufam&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    position: relative;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  nav {
+    background: #fe9a99;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 60px;
+  }
+  .logo {
+    flex: 1;
+    margin-left: 40px;
+  }
+  
+  .logo h1 {
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  .list-items {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .list {
+    list-style: none;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.4s background;
+  }
+  
+  .link:hover {
+    color: #ba4c4a;
+  }
+  
+  .main {
+    background: #fe9a99;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .main-left {
+    height: 100%;
+    width: 50%;
+  }
+  .main-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .img-v {
+    height: 30vw;
+    width: 30vw;
+  }
+  
+  .main-right p {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+  
+  .text {
+    margin-left: 18%;
+    padding-top: 32%;
+  }
+  
+  .text span {
+    font-size: 7vw;
+    letter-spacing: 25px;
+    font-weight: bold;
+  }
+  
+  .text p {
+    padding-top: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  
+  .right-bar {
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icons {
+    position: absolute;
+    bottom: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .icon-btn {
+    margin-top: 20px;
+    background: white;
+    text-decoration: none;
+    color: grey;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: relative;
+  }
+  
+  .icon-btn i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .search {
+    position: absolute;
+    color: white;
+    top: 25px;
+    font-size: 20px;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+section.prevention {
+  background-color: #1abc9c;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.text {
+  font-size: 40px;
+  transition: 2s all;
+  text-align: center;
+  margin-bottom: 750px;
+  margin-right: 170px;
+}
+p {
+  text-align: center;
+  font-size: 17px;
+}
+.spaced {
+  letter-spacing: 20px;
+}
+
+.icons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+  
+.advice {
+    margin: 1rem;
+    transition: 0.5s all;
+    text-align: center;
+    animation: anim 2s forwards;
+   }
+
+   .fas {
+    font-size: 30px;
+    animation: anim 2s forwards;
+  }
+
+@keyframes anim {
+  to {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .spaced {
+    letter-spacing: 8px;
+  }
+}
+
+#chartdiv {
+    max-width: 100%;
+    height: 800px;
+    background-color:#121212;
+  }
+
+div.heading{
+    font-size: xx-large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+
+div.list1{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    justify-content: space-between;
+    color: rgb(163, 76, 197);
+}
+
+div.list1 div{
+    width: 25%;
+    background-color: #333;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+div.list2{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    color: blue;
+    justify-content: space-between;
+}
+
+div.list2 div{
+    width: 33%;
+    background-color: #fe9a99;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+section.about{
+  display: flex;
+  align-items: center;
+  color: white;
+  height: 100%;
+  flex-direction: column;
+  background:linear-gradient(0deg, rgba(1, 1, 1, 0.5), rgba(1, 1, 1, 0.5)), url(https://image.freepik.com/free-vector/covid19-coronavirus-infection-spreading-pandemic-background-design_1017-24447.jpg);
+  background-size: cover;
+}
+
+section.about .about-heading{
+  height: 100%;
+  align-items: center;
+  /* font-size: xx-large; */
+  margin-top: 25px;
+  font-family: 'Nova Round', cursive;
+  font-size: 40px;
+}
+
+section.about .about-content{
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 1em;
+  font-family: 'Playfair Display', serif;
+}
+
+section.symptoms{
+  height: 100%;
+  background-color: aliceblue;
+  align-items: center;
+}
+
+.symptoms-list{
+  display: flex;
+  justify-content: space-around;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-family: 'Kufam', cursive;
+  font-size: 30px;
+  letter-spacing: 4px;
+  background-color: aliceblue;
+  padding-top: 8px;
+}
+
+ul{
+  list-style: none;
+}
+
+.self-checker a{
+  text-transform: uppercase; 
+  font-size: 25px;
+  padding: 8px; 
+  background-color: #1a73e8; 
+  border-radius: 15px;
+  text-decoration: none;
+  color: #121212;
+}
+
+.self-checker a:hover{
+  background-color: #111;
+  color: #1a73e8;
+  transition-duration: 1.3s;
+  font-size: 30px;
+}
+
+
+/* section.who{
+    background-color: #f76360;
+}
+
+div.who-btn a{
+    font-size: x-large;
+    background-color: rgb(162, 74, 197);
+    border-radius: 20px;
+    text-decoration: none;
+}
+div.who-btn a:hover{
+    font-size: xx-large;
+    background-color: rgb(181, 114, 207);
+    border-radius: 20px;
+    transition: 0.6s;
+    
+} */
+
+/* Footer 2 */
+footer.bg-color-2 {
+  background: #f8f8f8;
+  color: #666666;
+}
+footer.footer-2 .logo-footer {
+  margin-bottom: 35px;
+}
+footer.footer-2 .social-icons-2 {
+  margin-top: 20px;
+}
+footer.footer-2 .social-icons-2 a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background: transparent;
+  color: #888888;
+  margin-right: 5px;
+  border: 1px solid #e6e6e6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+footer.footer-2 .social-icons-2 a:hover {
+  background: #29b6f6;
+  border-color: #29b6f6;
+  color: #ffffff;
+}
+footer.footer-2 .social-icons-2 a.facebook:hover {
+  background-color: #02549F;
+  border-color: #02549F;
+}
+footer.footer-2 .social-icons-2 a.vk:hover {
+  background-color: #4C75A3;
+  border-color: #4C75A3;
+}
+footer.footer-2 .social-icons-2 a.vimeo:hover {
+  background-color: #1AB7EA;
+  border-color: #1AB7EA;
+}
+footer.footer-2 .social-icons-2 a.tumblr:hover {
+  background-color: #35465D;
+  border-color: #35465D;
+}
+footer.footer-2 .social-icons-2 a.twitter:hover {
+  background-color: #00ACED;
+  border-color: #00ACED;
+}
+footer.footer-2 .social-icons-2 a.behance:hover {
+  background-color: #1769FF;
+  border-color: #1769FF;
+}
+footer.footer-2 .social-icons-2 a.instagram:hover {
+  background-color: #DDCCBA;
+  border-color: #DDCCBA;
+}
+footer.footer-2 .social-icons-2 a.pinterest:hover {
+  background-color: #CD2129;
+  border-color: #CD2129;
+}
+footer.footer-2 .social-icons-2 a.flickr:hover {
+  background-color: #FF0084;
+  border-color: #FF0084;
+}
+footer.footer-2 .social-icons-2 a.dribbble:hover {
+  background-color: #EA4C89;
+  border-color: #EA4C89;
+}
+footer.footer-2 .social-icons-2 a.google:hover {
+  background-color: #D11516;
+  border-color: #D11516;
+}
+footer.footer-2 .social-icons-2 a.youtube:hover {
+  background-color: #E12A27;
+  border-color: #E12A27;
+}
+footer.footer-2 .social-icons-2 a.linkedin:hover {
+  background-color: #006699;
+  border-color: #006699;
+}
+footer.footer-2 .social-icons-2 a.skype:hover {
+  background-color: #00A7E5;
+  border-color: #00A7E5;
+}
+footer.footer-2 .footer-contact {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+footer.footer-2 .footer-contact ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  max-width: 450px;
+  display: inline-block;
+}
+footer.footer-2 .footer-contact ul li {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+footer.footer-2 .footer-contact ul li .fa {
+  margin-right: 5px;
+}
+footer.footer-2 .footer-contact ul li span {
+  display: inline-block;
+  margin-left: 15px;
+}
+footer.footer-2 .sub-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+footer.bg-color-1 {
+  background: #042433;
+  color: #999999;
+}
+footer .main-footer {
+  padding: 50px 0px 50px 0px;
+}
+footer .main-footer .widget-title {
+  color: #ffffff;
+  margin-bottom: 35px;
+  margin-top: 25px;
+}
+footer .main-footer .widget-inner ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+footer .main-footer .widget-inner ul li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+footer .main-footer .widget-inner ul li:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  font-size: 13px;
+  content: "\f105";
+  color: #e5e5e5;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+footer .main-footer .widget-inner ul li a {
+  color: #e5e5e5;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+footer .main-footer .widget-inner ul li a:hover {
+  color: #29b6f6;
+}
+footer .main-footer .widget-inner .logo-footer {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+footer .main-footer .widget-inner .social-icons {
+  margin-top: 20px;
+}
+footer .main-footer .widget-inner .social-icons a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  margin-right: 10px;
+  float: left;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+footer .sub-footer {
+  padding: 30px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
