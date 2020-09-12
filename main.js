@@ -10,3 +10,29 @@ window.onload = function () {
   };
 
 
+  var ts = new Date;
+  ts = ts.getTime();
+  let url = 'https://cdn.abplive.com/coronastats/prod/coronastats-new.json?ts='+ts;
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      //console.log(data)
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+
+  function appendData(data) {
+    let stateCount = document.getElementById("stateCount");
+    let totalCases = document.getElementById("totalCases");
+    let recovered = document.getElementById("recovered");
+    let death = document.getElementById("death");
+    //console.log(data.statewise.length)
+
+    totalCases.innerHTML = data.totalConfirmed;
+    recovered.innerHTML = data.totalRecovered;
+    death.innerHTML = data.totalDeaths;
+  }
