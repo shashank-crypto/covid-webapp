@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <style>
+        body{
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div >
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+
+<a href="https://www.covid19india.org/" target="_blank">Go to covid19India app</a>
+<script>
+
+    var ts = new Date;
+    ts = ts.getTime();
+    let url = 'https://cdn.abplive.com/coronastats/prod/coronastats-new.json?ts='+ts;
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        //console.log(data)
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+    
+    let arr = []
+    let death = []
+    let confirmed = []
+    let recovered = []
+
+    function appendData(data) {
+
+        for(var i=0 ; i<data.statewise.length ; i++){
+          arr.push(data.statewise[i].state)
+          death.push(parseInt(data.statewise[i].deaths))
+          confirmed.push(parseInt(data.statewise[i].confirmed))
+          recovered.push(parseInt(data.statewise[i].recovered))
+
+        }
+
+    }
+
+console.log(arr)
+console.log(death)
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: arr,
+        datasets: [{
+            label: 'deaths',
+            data: death,
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }
+        ,{
+            label: 'confirmed',
+            data: confirmed,
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            
+            borderWidth: 1
+        },
+        {
+            label: 'recovered',
+            data: recovered,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>

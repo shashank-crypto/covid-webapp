@@ -1,0 +1,12 @@
+{
+  "name": "chatIO",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "*",
+    "mongoose": "^5.10.12",
+    "path": "^0.12.7",
+    "socket.io": "*"
+  }
+}
