@@ -1,8 +1,15 @@
-# covid_code
+# NodeJs Projects
+## Project#07: ChatIO
 
-Covid-19 Project files for WEB TECHNOLOGY course.
+- NodeJs + Express
+- Simple SocketIO chat application
+- No CRUD just user and msg sessions
 
-My first project.
-TEAM MEMBERS:
-19BIT0425 - Shashank Kumar Chaudhry
-19BIT0419 - Abhinav 
+Final Show Case
+![VIEWS](https://github.com/MAshrafM/NodeJS_Projects/blob/master/07_ChatIO/show.jpg)
+
+### Future
+- Save Session and Cookies.
+- Save previous msgs.
+- Add Private Rooms.
+- Add emojis.

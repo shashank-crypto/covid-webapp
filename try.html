@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <style>
+    td{
+      padding: 10px
+    }
+    
+    table{
+      border: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="table table-striped">
+
+  </table>
+
+  <script>
+    var ts = new Date;
+    ts = ts.getTime();
+    let url = 'https://cdn.abplive.com/coronastats/prod/coronastats-new.json?ts='+ts;
+    fetch(url)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        //console.log(data)
+        appendData(data);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+    
+    const arr = []
+    const death = []
+
+
+    // <tr>
+    //   <th scope="row">1</th>
+    //   <td>Mark</td>
+    //   <td>Otto</td>
+    //   <td>@mdo</td>
+    // </tr>
+
+    function appendData(data) {
+      // console.log(data.statewise[0])
+      // console.log(data.statewise[0].state) 
+        
+        let html = "<thead><tr><th scope='col'>#</th><th scope='col'>First</th><th scope='col'>Last</th><th scope='col'>Handle</th></tr></thead><tbody>"
+        for(var i=0 ; i<data.statewise.length ; i++){
+          arr.push(data.statewise[i].state)
+          death.push(parseInt(data.statewise[i].deaths))
+          html+= `<tr><th scope='row'>${data.statewise[i].state}</th>`
+          html+= `<td>${data.statewise[i].confirmed}</td>`
+          html+= `<td>${data.statewise[i].recovered}</td>`
+          html+= `<td>${data.statewise[i].deaths}</td></tr>`
+        }
+        html += "</tbody>"
+        let table = document.getElementById('table')
+        table.innerHTML = html;
+        console.log(arr)
+        console.log(death)
+        console.log(data)
+    }
+
+    console.log('outside')
+    console.log(death)
+    
+    
+    </script>
+</body>
+</html>
