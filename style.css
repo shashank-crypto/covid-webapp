@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+}
+
+.c1{
+    min-height: 120px;
+}
+
+.container > div {
+    padding: 5px;
+    background-color: yellow;
+    border-radius: 5px;
+    width: 100%;
+    margin: 3px;
+    order: 1;
+}
+
+.f1{
+    display: flex;
+}
+
+.f1 > div {
+    background-color: white;
+    height: 20px;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: 1px;
+    height: fit-content;
+}
